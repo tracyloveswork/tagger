@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Bootswatch -->
+    <link rel="stylesheet" href="https://bootswatch.com/spacelab/bootstrap.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,700,700i,900" rel="stylesheet">
+
+    <!-- TitaToggle https://kleinejan.github.io/titatoggle/ -->
+    <link rel="stylesheet" href="index.css" type="text/css"/>
+
+    <title>Tagger!</title>
+
+  </head>
+
+  <body>
+
+    <noscript>
+    You need to enable JavaScript to run this app.
+    </noscript>
+
+    <div class="container full">
+
+      <div class="row full">
+
+        <!-- Static Navbar -->
+        <div class="fixed-nav">
+          <div id="newTag">
+            <button type="button" class="btn btn-danger btn-circle"><span class="glyphicon glyphicon-plus"></span></button>
+          </div>
+        </div> <!-- End of Navbar -->
+
+          <!-- Main -->
+
+          <div class="col-md-4 list-column">
+            
+            <!-- Tag List -->
+
+            <!-- Panel 1-->
+            <div class="tag-panel">
+
+              <div class="panel-body">
+             <!--  <div class="list-active-bar"></div> -->
+
+                <div class="row">
+                
+                  <div class="col-md-2"><span class="glyphicon glyphicon-star-empty not-active"></span></div>
+                  <div class="col-md-8">
+                    <span class="tag-title">Tag Title 1</span><br />
+                    <span class="tag-location">Location</span>
+                  </div>
+                  <div class="col-md-2"><span class="glyphicon glyphicon-time not-active"></span><br />
+                    <span class="glyphicon glyphicon-eye-open active"></span></div>
+                </div>
+              </div>
+            </div>
+            <!-- End of Panel 1-->
+
+            <!-- Panel 2-->
+            <div class="tag-panel">
+
+              <div class="panel-body">
+              
+
+                <div class="row">
+                <div class="list-active-bar"></div>
+                
+                  <div class="col-md-2"><span class="glyphicon glyphicon-star-empty not-active"></span></div>
+                  <div class="col-md-8">
+                    <span class="tag-title">Tag Title 2</span><br />
+                    <span class="tag-location">Location</span>
+                  </div>
+                  <div class="col-md-2"><span class="glyphicon glyphicon-time not-active"></span><br />
+                    <span class="glyphicon glyphicon-eye-open active"></span></div>
+                </div>
+              </div>
+            </div>
+            <!-- End of Panel 2-->
+
+
+            <!-- End of Tag List -->
+
+          </div>
+
+          <div class="col-md-8 view-column">
+            
+            <!-- View/Edit -->
+
+            <!-- Close View/Edit Button -->
+            <div class="row">
+              <div class="col-md-12"><span class="glyphicon glyphicon-remove"></div>
+            </div>
+
+            <!-- Form Beginning -->
+            <form class=tag-form>
+
+              <div class="row">
+                <div class="col-md-12">
+                <p class="date-view">Monday 20 March 2017</p>
+                <input type="text" class="tag-title-view" name="tag-title" value="Tag Title">
+                <p class="location-view">Location </p>            
+                </div>
+              </div>
+
+               <!-- Toggle Button Row -->
+             <div class="row">
+
+              <div class="col-md-12">
+              <div class="form-group form-inline">
+
+                <div class="checkbox space-right checkbox-slider--b-flat checkbox-slider-warning">
+                  <label>
+                    <input type="checkbox" checked><span class="space-left"> Public</span>
+                  </label>
+                </div>
+
+                <div class="checkbox space-right checkbox-slider--b-flat checkbox-slider-warning">
+                  <label>
+                    <input type="checkbox"><span class="space-left"> Expires</span>
+                  </label>
+                </div>
+
+                </div> 
+                </div>
+
+              </div>
+              <!-- End of Toggle Button Row -->
+
+              <!-- Decription Paragraph -->
+             <div class="row">
+                <div class="col-md-12">
+                <input type="text" class="tag-description-view" name="tag-description" value="Description of your tagged location and/or event.">
+                </div>
+              </div>
+
+              <!-- Bottom Buttons -->
+              <div class=bottom-buttons>
+
+                <button type="button" class="btn btn-danger">Delete</button>
+              
+                <button type="button" class="btn btn-warning">Save</button>
+
+              </div>
+
+            </form>
+            <!-- End of Form -->
+
+            <!-- End of View/Edit -->
+
+          </div>
+
+          <!-- End of Main -->
+          
+        </div>
+      </div> <!-- End of Container -->
+
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+      </body>
+
+    </html>

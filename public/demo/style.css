@@ -1,0 +1,139 @@
+html,body {
+  height: 100%;
+  width: 100%;
+  positon: absolute;
+  font: normal 1em "Arial";
+}
+nav {
+ padding: 10px;
+ position: fixed;
+ background:  #303030;
+ z-index: 1;
+ height: 100%;
+
+
+}
+nav::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+aside {
+  position: absolute;
+  width: 308px;
+  height: 100%;
+  background: #303030;
+  left: 70px;
+  top: 0;
+  display: none;
+}
+aside::before {
+  content: "";
+  display: block;
+  height: 67px;
+}
+aside a {
+  display: block;
+  padding: 12px 18px;
+  text-decoration: none;
+  font-size: 30px;
+  color: #818181;
+  border-bottom: 1px solid #414141;
+}
+
+.toggle-wrap {
+  padding: 10px;
+  position: relative;
+  cursor: pointer;
+  float: left;
+  
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.toggle-bar,
+.toggle-bar::before,
+.toggle-bar::after,
+.toggle-wrap.active .toggle-bar,
+.toggle-wrap.active .toggle-bar::before,
+.toggle-wrap.active .toggle-bar::after {
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+.toggle-bar {
+    width: 38px;
+    margin: 10px 0;
+    position: relative;
+    border-top: 6px solid #ddd;
+    display: block;
+}
+.toggle-bar::before,
+.toggle-bar::after {
+    content: "";
+    display: block;
+    background: #ddd;
+    height: 6px;
+    width: 38px;
+    position: absolute;
+    top: -16px;
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -ms-transform-origin: 13%;
+    -webkit-transform-origin: 13%;
+    transform-origin: 13%;
+}
+.toggle-bar::after {
+  top: 4px;
+}
+.toggle-wrap.active .toggle-bar {
+  border-top: 6px solid transparent;
+}
+.toggle-wrap.active .toggle-bar::before {
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.toggle-wrap.active .toggle-bar::after {
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+#map{
+    float: right;
+    display: block;
+}
+
+.btn-circle{
+  width: 50px;
+  height: 50px;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.42;
+  border-radius: 25px;
+  position: absolute;
+  left: 15px;
+  bottom: 5%;
+}
+
+.glyphicon-plus{
+  font-size: 25px;
+  text-align: center;
+  left: 2px;
+}
+
+#note-taker{
+  width:300px;
+  height:100%;
+  background:gray;
+  position: absolute;
+  z-index: -1;
+  left: 78px;
+}
