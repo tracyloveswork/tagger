@@ -18,41 +18,41 @@ router.get("/tags", function(req, res) {
   Tag.find({}, function(error, doc) {
     // Send any errors to the browser
     if (error) {
-      res.send(error);
+      res.json(error);
     }
     // Or send the doc to the browser
     else {
-      res.send(doc);
+      res.json(allTags);
     }
   });
 });
 
 // New Tag creation via POST route
-router.post("/submit", function(req, res) {
-  // A new tag with default values is saved to the database 
-  var newTag = new Tag();
-  // Save the new tag to mongoose
-  newTag.save(function(error, doc) {
-    // Send any errors to the browser
-    if (error) {
-      res.send(error);
-    }
-    // Otherwise
+router.post('/submit', (req, res) => {
+// A new tag with default values is saved to the database 
+  const newTag = new Tag();
+
+  newTag.save((err, savedTag) => {
+    if (err) return res.json(err)
+    return res.json(savedTag)
+  });
+});
+
+
+    // Add when authentication is working
     // else {
       // Find our user and push the new tag id into the User's notes array
       // User.findOneAndUpdate({}, { $push: { "tags": doc._id } }, { new: true }, function(err, newdoc) {
       //   // Send any errors to the browser
       //   if (err) {
-      //     res.send(err);
+      //     res.json(err);
       //   }
       //   // Or send the newdoc to the browser
       //   else {
-          // res.send(newdoc);
+          // res.json(newdoc);
       //   }
       // });
-    }
-  });
-});
+
 
 // This is the route we will send POST requests to update
 router.post("/update", function(req, res) {
@@ -83,9 +83,9 @@ router.delete("/update/:id", function(req, res) {
 
    Tag.findByIdAndRemove(req.params.id, function (err, response) {
     if(err){
-      res.send("Delete error: " + err);
+      res.json("Delete error: " + err);
     }
-    res.send(response);
+    res.json(response);
   });
 
 });
