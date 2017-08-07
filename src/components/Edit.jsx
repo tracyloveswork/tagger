@@ -34,7 +34,7 @@ class Edit extends Component {
               <div className="row">
                 <div className="col-md-12">
                 <p className="date-view">Monday 20 March 2017</p>
-                <input type="text" className="tag-title-view" name="tag-title" value="Tag Title" />
+                <input type="text" className="tag-title-view" form="tag-form" name="tag-title" defaultValue="Tag Title" />
                 <p className="location-view">Location </p>            
                 </div>
               </div>

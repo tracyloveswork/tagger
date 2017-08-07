@@ -126,7 +126,7 @@ body {
 }
 
 input[type="text"] { 
-  border: none
+  border: none;
    }
 
 .date-view {

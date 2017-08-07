@@ -1,22 +1,25 @@
 // Include the Mongoose Dependencies
-var mongoose = require("mongoose");
+const mongoose = require("mongoose");
 
-var Schema = mongoose.Schema;
+const Schema = mongoose.Schema;
 
 // Create a Schema for saving Tags. 
-var TagSchema = new Schema({
+const TagSchema = new Schema({
   title: {
     type: String,
     trim: true,
+    default: "Your Tag Title",
     required: "Title is required"
   },
   body: {
   	type: String,
-    trim: true
+    trim: true,
+    default: ""
   },
   location : {
         type: [Number],
         index:'2d',
+        default: [40.5342783,-74.5224469],
         required: "Location is needed"
     },
     userCreated: {
@@ -28,7 +31,8 @@ var TagSchema = new Schema({
     	default: -1
     },
   public: {
-    type: Boolean
+    type: Boolean,
+    default: true
   }
 });
 
