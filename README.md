@@ -29,3 +29,6 @@ PHASE III
 Adding expiration time to public notes and converting site to React Native.
 
 Possible additional functionality: Creating stickers and custom markers for tags.  Ability to blow out User profile and create groups.
+
+
+// Edit 2019
